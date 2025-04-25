@@ -22,7 +22,6 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
     setInput(prev=>
         ({...prev, [name]: value })
     )   
-
 }
 
 console.log(input)
