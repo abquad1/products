@@ -99,20 +99,22 @@ useEffect(()=>{
             <div className=''>
               {loading && <p>loading...</p>}
               {error && <p>Error: {error}</p>}
-              <div className='grid grid-cols-3 gap-6 '>
+              <div className='grid md:grid-cols-3 md:gap-6 sm: grid-cols-2 sm: gap-5 '>
               {apiData && apiData.map((item)=>( 
                 <div key={item.id} className='border border-black rounded-2xl h-[60%] p-3'>
                     
-                    <Image alt='' src={item.image} className='rounded-tr-2xl rounded-tl-2xl w-full h-[80%]' width={400} height={400}></Image>
+                  <div className='relative h-full w-full'>
+                  <Image alt='' src={item.image} className='object-fill rounded-tr-2xl rounded-tl-2xl w-full h-[80%]' width={400} height={400}></Image>
                     
+                    </div>                    
 
-                    <div className='flex items-center justify-center w-[90%] m-auto'>
-                      <div className='w-[70%] '>
+                    <div className='md:flex md:items-center md:justify-center sm: block md:w-[90%] m-auto sm: w-full sm: text-left'>
+                      <div className='md:w-[70%] sm: w-full mt-2 '>
                         <h3>{item.title}</h3>
                         <h3><b>Price:</b> ${item.price}</h3>
                       </div>
 
-                      <button className='w-[30%] bg-black text-white font-semi-bold p-1 rounded-lg' onClick={()=>handleCart(item)}>Add to Cart</button>
+                      <button className='md:w-[30%] sm: w-[80%] bg-black text-white font-semi-bold p-1 rounded-lg' onClick={()=>handleCart(item)}>Add to Cart</button>
                     </div>
                 </div>
               ))}
