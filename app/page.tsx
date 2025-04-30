@@ -3,7 +3,7 @@ import SignIn from "./login/page";
 
 export default function Home() {
   return (
-    <div className=" h-screen">
+    <div className=" h-screen bg-white">
       <UserProvider>
         <SignIn />
       </UserProvider>
