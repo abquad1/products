@@ -114,7 +114,7 @@ const result = await response.json();
 //         }}
 
   return (
-    <div className='w-full  pt-8'>
+    <div className='w-full pt-8'>
 
         <h1 className='text-4xl text-center mb-8'>Sign In</h1>
         <div className='md:w-[30%] sm: w-[70%] m-auto border border-black h-[80%] px-8 leading-10 rounded-lg'>
