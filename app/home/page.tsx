@@ -120,7 +120,7 @@ useEffect(()=>{
               ))}
               </div>
 
-              <div className='flex md:w-[80%] sm: w-full m-auto pt-6'>
+              <div className='flex md:w-[80%] sm: w-full m-auto sm: mt-12 md:mt-0'>
             <button id='btnPrev' onClick={()=>handlePrev()} className={`h-12 border border-gray-400 font-semibold text-[#F4511E] py-2 px-4 rounded-tl-md rounded-bl-md ${lastElement === perPage ? "bg-gray-200 text-gray-400" : ""}`} disabled={lastElement === perPage}>
               Prev</button>
               {[...Array(index)].map((_, i) =>
