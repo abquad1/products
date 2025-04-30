@@ -99,7 +99,7 @@ useEffect(()=>{
             <div className=''>
               {loading && <p>loading...</p>}
               {error && <p>Error: {error}</p>}
-              <div className='grid md:grid-cols-3 md:gap-6 sm: grid-cols-2 sm: gap-5 '>
+              <div className='grid md:grid-cols-3 md:gap-6 sm: grid-cols-2 sm: gap-6 mt-4 '>
               {apiData && apiData.map((item)=>( 
                 <div key={item.id} className='border border-black rounded-2xl h-[60%] p-3'>
                     
@@ -111,16 +111,16 @@ useEffect(()=>{
                     <div className='md:flex md:items-center md:justify-center sm: block md:w-[90%] m-auto sm: w-full sm: text-left'>
                       <div className='md:w-[70%] sm: w-full mt-2 '>
                         <h3>{item.title}</h3>
-                        <h3><b>Price:</b> ${item.price}</h3>
+                        <h3 className='my-6'><b>Price:</b> ${item.price}</h3>
                       </div>
 
-                      <button className='md:w-[30%] sm: w-[80%] bg-black text-white font-semi-bold p-1 rounded-lg' onClick={()=>handleCart(item)}>Add to Cart</button>
+                      <button className='md:w-[30%] sm: w-[80%]  bg-black text-white font-semi-bold p-1 rounded-lg' onClick={()=>handleCart(item)}>Add to Cart</button>
                     </div>
                 </div>
               ))}
               </div>
 
-              <div className='flex md:w-[80%] sm: w-[75%] m-auto pt-6'>
+              <div className='flex md:w-[80%] sm: w-full m-auto pt-6'>
             <button id='btnPrev' onClick={()=>handlePrev()} className={`h-12 border border-gray-400 font-semibold text-[#F4511E] py-2 px-4 rounded-tl-md rounded-bl-md ${lastElement === perPage ? "bg-gray-200 text-gray-400" : ""}`} disabled={lastElement === perPage}>
               Prev</button>
               {[...Array(index)].map((_, i) =>
